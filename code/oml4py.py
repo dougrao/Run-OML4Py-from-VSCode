@@ -12,7 +12,7 @@ def main():
     oml.connect(user=user, password=pwd, dsn=dsn, automl=automl)
 
     #confirme que a conexão foi estabelecida
-    print(oml.isconnected())
+    print("Is oml connected? ",oml.isconnected())
 
     #criação dos dataframes a partir de tabelas presentes no schema SH
     CUSTOMERS = oml.sync(query = 'SELECT CUST_ID, CUST_GENDER, CUST_MARITAL_STATUS, CUST_YEAR_OF_BIRTH, CUST_INCOME_LEVEL, CUST_CREDIT_LIMIT FROM SH.CUSTOMERS')
